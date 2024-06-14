@@ -166,7 +166,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     if args.reflect {
         // SpriteBundle types
         app.rollback_component_with_reflect::<Sprite>()
-            .rollback_component_with_reflect::<Transform>()
+            app.rollback_component_with_reflect::<Transform>()
             .rollback_component_with_reflect::<GlobalTransform>()
             .rollback_component_with_reflect::<Handle<Image>>()
             .rollback_component_with_reflect::<Visibility>()
