@@ -48,7 +48,7 @@ impl<'a> private::AddRollbackCommandExtensionSeal for EntityCommands<'a> {}
 
 impl<'a> AddRollbackCommandExtension for EntityCommands<'a> {
     fn add_rollback(&mut self) -> &mut Self {
-        self.add(AddRollbackCommand);
+        self.queue(AddRollbackCommand);
         self
     }
 }

@@ -75,7 +75,7 @@ where
 
     trace!(
         "Mapped {}",
-        bevy::utils::get_short_name(std::any::type_name::<R>())
+        std::any::type_name::<R>().to_string()
     );
 }
 

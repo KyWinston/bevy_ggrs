@@ -64,7 +64,7 @@ where
 
         trace!(
             "Snapshot {}",
-            bevy::utils::get_short_name(std::any::type_name::<S::Target>())
+            std::any::type_name::<S::Target>().to_string()
         );
     }
 
@@ -85,7 +85,7 @@ where
 
         trace!(
             "Rolled back {}",
-            bevy::utils::get_short_name(std::any::type_name::<S::Target>())
+            std::any::type_name::<S::Target>().to_string()
         );
     }
 }
